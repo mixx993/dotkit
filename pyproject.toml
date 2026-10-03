@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotkit"
+version = "0.1.0"
+description = "把人物视频做成按节拍切换的点阵风（点之战 style dot-matrix video）"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "opencv-python-headless>=4.8",
+  "pillow>=10",
+  "librosa>=0.10",
+  "torch>=2.2",
+  "transformers>=4.45",
+]
+
+[project.urls]
+Homepage = "https://github.com/mixx993/dotkit"
+
+[project.scripts]
+dotkit = "dotkit.cli:main"
+
+[tool.setuptools]
+packages = ["dotkit"]
